@@ -55,6 +55,8 @@ recently had the tools for.
 - **Contracting / part-time** engagements in the same space.
 - **Location:** available to work in person across Europe and the UAE,
   and remotely globally.
+- **Right to work:** Finnish citizen (EU/EEA) and existing UAE work
+  authorisation. No sponsorship required.
 - **What he wants to be doing:** product strategy, AI deployment
   pipelines, AI orchestration, and product processes for AI-native
   organisations.
