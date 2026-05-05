@@ -1,0 +1,310 @@
+/* Japanese-Finnish-American: washi paper + sumi ink + vermilion accent.
+   Restraint, hairlines, generous negative space. */
+
+/* Light theme — washi paper + sumi ink + vermilion. */
+:root {
+  --bg: #f4f0e6;
+  --surface: #ede8da;
+  --fg: #1a1815;
+  --muted: #6f6a5e;
+  --accent: #a8392c;
+  --accent-hover: #862a20;
+  --hairline: #d6cfbd;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 18px 40px -20px rgba(0,0,0,.08);
+}
+
+/* Dark theme — sumi night. Applied when OS prefers dark
+   AND no explicit manual override is set. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14130f;
+    --surface: #1c1b16;
+    --fg: #ebe5d3;
+    --muted: #8c8674;
+    --accent: #d6604e;
+    --accent-hover: #e88472;
+    --hairline: #2a2820;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 18px 40px -20px rgba(0,0,0,.5);
+  }
+}
+
+/* Manual overrides — set by the toggle, persisted in localStorage.
+   Attribute selectors override the media query above. */
+html[data-theme="light"] {
+  --bg: #f4f0e6;
+  --surface: #ede8da;
+  --fg: #1a1815;
+  --muted: #6f6a5e;
+  --accent: #a8392c;
+  --accent-hover: #862a20;
+  --hairline: #d6cfbd;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 18px 40px -20px rgba(0,0,0,.08);
+}
+
+html[data-theme="dark"] {
+  --bg: #14130f;
+  --surface: #1c1b16;
+  --fg: #ebe5d3;
+  --muted: #8c8674;
+  --accent: #d6604e;
+  --accent-hover: #e88472;
+  --hairline: #2a2820;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 18px 40px -20px rgba(0,0,0,.5);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-serif, "Iowan Old Style", "Hiragino Mincho ProN", "YuMincho", Georgia, serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background 240ms ease, color 240ms ease;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 6rem 1.5rem 4rem;
+  position: relative;
+}
+
+/* --- Theme toggle ------------------------------------------------------ */
+
+.toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  transition: color 200ms ease;
+  z-index: 10;
+}
+
+.toggle:hover { color: var(--accent); }
+.toggle:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; border-radius: 50%; }
+
+.toggle .sun, .toggle .moon {
+  width: 18px; height: 18px;
+  position: absolute;
+  transition: opacity 240ms ease, transform 240ms ease;
+}
+
+/* Default (light): show moon (click → dark).
+   Dark active: show sun (click → light). */
+.toggle .sun  { opacity: 0; transform: rotate(-30deg) scale(.85); }
+.toggle .moon { opacity: 1; transform: rotate(0) scale(1); }
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .toggle .sun  { opacity: 1; transform: rotate(0) scale(1); }
+  html:not([data-theme="light"]) .toggle .moon { opacity: 0; transform: rotate(30deg) scale(.85); }
+}
+
+html[data-theme="dark"] .toggle .sun  { opacity: 1; transform: rotate(0) scale(1); }
+html[data-theme="dark"] .toggle .moon { opacity: 0; transform: rotate(30deg) scale(.85); }
+html[data-theme="light"] .toggle .sun  { opacity: 0; transform: rotate(-30deg) scale(.85); }
+html[data-theme="light"] .toggle .moon { opacity: 1; transform: rotate(0) scale(1); }
+
+/* --- Card -------------------------------------------------------------- */
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+}
+
+.card.wide { max-width: 680px; text-align: left; }
+
+/* Avatar */
+.avatar-frame {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.avatar-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  pointer-events: none;
+}
+
+.avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 42% 25%;
+  transform: scale(1.25);
+  transform-origin: 42% 25%;
+  display: block;
+}
+
+.portrait img {
+  filter: url(#portrait) contrast(1.04) saturate(1.02);
+}
+
+/* --- Typography -------------------------------------------------------- */
+
+h1 {
+  font-size: 2.1rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.005em;
+  font-weight: 500;
+}
+
+/* Hairline ornament under the name — a small Japanese-style mark. */
+.rule {
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: var(--accent);
+  margin: 1.25rem auto 1.25rem;
+  opacity: 0.85;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 1.02rem;
+  margin: 0 0 2.75rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+/* --- Links list -------------------------------------------------------- */
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.links li {
+  margin: 0.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Inter", sans-serif;
+  font-size: 0.98rem;
+}
+
+.links a {
+  color: var(--fg);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.2rem 0;
+  transition: color 160ms ease;
+}
+
+.links a:hover { color: var(--accent); }
+.links a:hover .icon { color: var(--accent); }
+
+.links .icon {
+  width: 1.05em;
+  height: 1.05em;
+  flex-shrink: 0;
+  color: var(--muted);
+  transition: color 160ms ease;
+}
+
+.links .note {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+/* --- Contact ----------------------------------------------------------- */
+
+.contact {
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  letter-spacing: 0.03em;
+}
+
+.agents-link {
+  margin: 0.75rem 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.agents-link a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--hairline);
+}
+
+.agents-link a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* --- Generic links ----------------------------------------------------- */
+
+a, a:visited { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+/* --- Projects page ----------------------------------------------------- */
+
+.back {
+  margin: 0 0 2.5rem;
+  font-size: 0.9rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.project {
+  border-top: 1px solid var(--hairline);
+  padding: 2rem 0;
+}
+
+.project:last-child { border-bottom: 1px solid var(--hairline); }
+
+.project h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.project h3 {
+  margin: 1.25rem 0 0.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.project p { margin: 0.25rem 0; }
+
+.meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}

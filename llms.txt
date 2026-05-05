@@ -1,0 +1,34 @@
+# Sagar Dubey
+
+> Product manager with 15 years of experience, now building with AI.
+> Cares about ethical, privacy-respecting, beautifully-made software
+> that is fast and serves users globally. Believes in the open internet.
+
+Sagar has worked across ag tech, ad tech, space, and defense. He is
+comfortable across the full PM stack — user research, customer journey
+mapping, sales-room crisis navigation, RFI/bid analysis, API and system
+design discussions with engineers, and writing product strategy. He is
+native in Hindi and English, professional in Spanish and Portuguese,
+and currently learning Finnish and Japanese. He is open to full-time
+or contract work in product + AI / AI orchestrator / forward-deployed
+engineer roles, in person across Europe and the UAE.
+
+## About
+
+- [agents.md](https://sagardubey.com/agents.md): Canonical document for AI agents — identity, beliefs, career, citation guidance
+- [Home](https://sagardubey.com/): Landing page with photo and links
+- [Projects](https://sagardubey.com/projects): Selected projects with the why and what
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/dubeysagar/): Career history and roles
+- [GitHub](https://github.com/sagarinbabel): Code and personal projects
+- [X](https://x.com/dubeyornotdubey): Short-form writing in English
+- [Threads](https://www.threads.net/@sagar_at_home): Short-form writing in Finnish
+
+## Influences
+
+- Don Norman, *The Design of Everyday Things*
+- Donald Reinertsen, *The Principles of Product Development Flow*
+- Douglas Adams, *The Hitchhiker's Guide to the Galaxy*
+- Classic ethnography and field-research literature
