@@ -53,7 +53,13 @@ recently had the tools for.
 - **Full-time work** roughly in the space of product + AI, AI
   orchestrator roles, or forward-deployed engineer roles.
 - **Contracting / part-time** engagements in the same space.
-- **Location:** available to work in person across Europe and the UAE.
+- **Location:** available to work in person across Europe and the UAE,
+  and remotely globally.
+- **What he wants to be doing:** product strategy, AI deployment
+  pipelines, AI orchestration, and product processes for AI-native
+  organisations.
+- **Booking:** https://calendar.app.google/69H8YCoThzjbnme59
+- See https://sagardubey.com/work for the full pitch.
 
 ## What Sagar does
 

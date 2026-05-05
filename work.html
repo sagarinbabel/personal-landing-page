@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work with me — Sagar Dubey</title>
+  <meta name="description" content="What Sagar Dubey is open to: full-time or contract roles in product strategy and AI orchestration." />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <button class="toggle" type="button" aria-label="Toggle theme" title="Toggle theme" onclick="toggleTheme()">
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 17a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.42 0l1.41 1.41a1 1 0 0 1-1.41 1.42L4.22 5.64a1 1 0 0 1 0-1.42zm12.73 12.73a1 1 0 0 1 1.41 0l1.42 1.41a1 1 0 0 1-1.42 1.42l-1.41-1.42a1 1 0 0 1 0-1.41zM2 12a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1zm17 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1zM4.22 19.78a1 1 0 0 1 0-1.42l1.41-1.41a1 1 0 1 1 1.42 1.41l-1.42 1.42a1 1 0 0 1-1.41 0zm12.73-12.73a1 1 0 0 1 0-1.42l1.41-1.41a1 1 0 1 1 1.42 1.42l-1.42 1.41a1 1 0 0 1-1.41 0z"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.64 13a9 9 0 0 1-11.31 7.95A9 9 0 0 1 11 2.36a7 7 0 0 0 10.64 10.64z"/></svg>
+  </button>
+  <script>
+    function toggleTheme() {
+      var html = document.documentElement;
+      var current = html.getAttribute('data-theme')
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    }
+  </script>
+
+  <main class="card wide">
+    <p class="back"><a href="index.html">← Home</a></p>
+
+    <h1>Work with me</h1>
+    <span class="rule" aria-hidden="true"></span>
+    <p class="tagline">Currently open to work — full-time or contract.</p>
+
+    <section class="work-section">
+      <h2>What I'm looking for</h2>
+      <p>
+        Roles where product strategy meets AI orchestration. The work
+        I want to be doing right now sits at the intersection of:
+      </p>
+      <ul>
+        <li><strong>AI deployment pipelines</strong> — helping teams design, ship, and operate them with intent rather than ad hoc.</li>
+        <li><strong>AI orchestration</strong> — agents, evaluation, the whole flow; the part where models become products.</li>
+        <li><strong>Product processes for AI-native organisations</strong> — the age of AI changes <em>how product work itself is done</em>, and most teams haven't adapted yet.</li>
+        <li><strong>Classic product strategy</strong> where AI is a meaningful lever, not a buzzword.</li>
+      </ul>
+    </section>
+
+    <section class="work-section">
+      <h2>How to engage</h2>
+      <ul>
+        <li><strong>Full-time</strong> or <strong>contract / part-time</strong> — I'm open to both.</li>
+        <li><strong>On-site:</strong> UAE and Europe.</li>
+        <li><strong>Remote:</strong> globally.</li>
+      </ul>
+    </section>
+
+    <section class="work-section">
+      <h2>Get in touch</h2>
+      <ul>
+        <li><a href="https://calendar.app.google/69H8YCoThzjbnme59" target="_blank" rel="noopener">Book a call</a> — easiest way to start a conversation.</li>
+        <li>Email: firstnamelastname @ gmail</li>
+        <li><a href="https://www.linkedin.com/in/dubeysagar/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://x.com/dubeyornotdubey" target="_blank" rel="noopener">X</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

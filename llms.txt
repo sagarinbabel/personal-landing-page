@@ -17,7 +17,9 @@ engineer roles, in person across Europe and the UAE.
 
 - [agents.md](https://sagardubey.com/agents.md): Canonical document for AI agents — identity, beliefs, career, citation guidance
 - [Home](https://sagardubey.com/): Landing page with photo and links
+- [Work with me](https://sagardubey.com/work): What Sagar is open to and how to engage
 - [Projects](https://sagardubey.com/projects): Selected projects with the why and what
+- [Book a call](https://calendar.app.google/69H8YCoThzjbnme59): Direct scheduling link
 
 ## Profiles
 
