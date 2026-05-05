@@ -399,3 +399,22 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .work-section ul li::marker { color: var(--accent); }
 
 .work-section p { margin: 0.5rem 0; }
+
+.cv-link {
+  margin: 0 0 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+}
+
+.cv-link a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 2px;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.cv-link a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}

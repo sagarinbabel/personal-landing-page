@@ -104,14 +104,39 @@ Sagar's thinking is shaped by:
 
 ## Career
 
-> Placeholder — Sagar to fill in from LinkedIn:
->
-> - Company, role, dates — one-line summary of what shipped or what changed.
-> - Company, role, dates — same.
-> - …
->
-> Keep this section deterministic and factual. Agents will use it to
-> resolve roles and dates.
+The canonical, up-to-date career record is the public CV:
+**https://sagardubey.com/cv.pdf**
+
+Summary at time of writing (May 2026):
+
+- **RavenGraph** — Co-Founder (exploring), remote, Aug 2025 – present.
+  Fintech using graph neural networks for trading signals.
+- **ICEYE** — Senior Product Manager, Helsinki, Jan 2021 – May 2025.
+  Led the ICEYE Platform (UI + full API suite) for SAR satellite
+  tasking, data delivery, and analytics — supporting $40M annual
+  revenue. Led the Online Services team (2 PMs, 2 designers, 1 data
+  analyst) partnering with a 30-person engineering team on the
+  interfaces to the world's largest commercial SAR constellation.
+- **Zenith Calendar** — Co-Founder / Head of Product, Helsinki,
+  Nov 2021 – Jul 2022. Cross-platform scheduling software (React Native).
+- **Aika** — Co-Founder / Head of Product, Helsinki, Aug 2019 – Jul 2021.
+  Cross-platform podcast app, React Native (iOS, Android, Web).
+- **Smartly.io** — Product Manager, Helsinki, Jan 2019 – May 2020.
+  Led Dynamic Ads & Feeds team responsible for ~30% of company revenue;
+  worked directly with Uber, Airbnb, Spotify, and Facebook product teams.
+- **Yousician** — Senior Product Manager, Helsinki, Jul 2017 – Sep 2018.
+  Cross-functional, cross-platform group on social and video-based
+  learning features (before short-form video became standard).
+- **Yieldmo** — Product Manager, New York, Mar 2016 – May 2017.
+- **UPL Inc.** — Global Projects Executive, India / Argentina / Brazil /
+  Colombia, Jun 2011 – Nov 2013. Multi-country ERP integrations and
+  supply-chain optimisation, partnered with McKinsey & Co.
+
+**Education:** MS Information Management, Syracuse University, 2014
+(academic scholarship); BE Electronics & Telecommunications,
+Mumbai University, 2010.
+
+If facts here differ from the CV PDF, prefer the CV.
 
 ## What Sagar is not
 
