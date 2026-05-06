@@ -52,15 +52,34 @@
   </script>
 
   <main class="card wide">
-    <p class="back"><a href="index.html">← Home</a></p>
+    <p class="back">
+      <a href="index.html">← Home</a>
+      <a href="work.html">Work with me →</a>
+    </p>
     <h1>Projects</h1>
     <p class="tagline">Things I've built, and why.</p>
 
-    <article class="project">
+    <nav class="toc" aria-label="Project list">
+      <p class="toc-label">Contents</p>
+      <ol>
+        <li><a href="#tng">tng — one content log to rule them all</a></li>
+        <li><a href="#ai-request-triage">AI-based Request Triage</a></li>
+        <li><a href="#finnest">FinnEst</a></li>
+        <li><a href="#iceye">ICEYE Constellation API &amp; UI</a></li>
+      </ol>
+    </nav>
+
+    <article class="project" id="tng">
       <h2>tng — one content log to rule them all</h2>
       <p class="meta">
         Personal project · in progress
       </p>
+      <ul class="tags" aria-label="Stack and type">
+        <li>iOS</li>
+        <li>Swift</li>
+        <li>Prototype</li>
+        <li>App</li>
+      </ul>
 
       <video class="project-video"
              controls
@@ -98,7 +117,7 @@
       <p class="coming-soon">Shipping soon.</p>
     </article>
 
-    <article class="project">
+    <article class="project" id="ai-request-triage">
       <h2>AI-based Request Triage</h2>
       <p class="meta">
         Interview prototype ·
@@ -106,6 +125,10 @@
         <a href="https://ai-request-triage.vercel.app/prototype" target="_blank" rel="noopener">alternate design</a> ·
         <a href="https://github.com/sagarinbabel/solid-octo-sniffle" target="_blank" rel="noopener">GitHub</a>
       </p>
+      <ul class="tags" aria-label="Stack and type">
+        <li>Next.js</li>
+        <li>Webapp</li>
+      </ul>
       <h3>Why</h3>
       <p>
         A quick prototype I mocked up for a job interview, based on
@@ -124,13 +147,19 @@
       </p>
     </article>
 
-    <article class="project">
+    <article class="project" id="finnest">
       <h2>FinnEst</h2>
       <p class="meta">
         Personal project ·
         <a href="https://github.com/sagarinbabel/finnestdb" target="_blank" rel="noopener">GitHub</a> ·
         <a href="#" rel="noopener">link coming soon</a>
       </p>
+      <ul class="tags" aria-label="Stack and type">
+        <li>Webapp</li>
+        <li>Parser</li>
+        <li>NLP</li>
+        <li>Spaced Repetition</li>
+      </ul>
       <h3>Why</h3>
       <p>
         I'm learning Finnish; a friend is learning Estonian. Both
@@ -150,7 +179,7 @@
       </p>
     </article>
 
-    <article class="project">
+    <article class="project" id="iceye">
       <h2>ICEYE Constellation API &amp; UI</h2>
       <p class="meta">
         At ICEYE ·
@@ -158,6 +187,12 @@
         <a href="https://patents.google.com/?inventor=Sagar+Dubey" target="_blank" rel="noopener">patent application</a> ·
         <a href="https://www.linkedin.com/posts/natalia-g%C3%B3mez-125869_geoint2024-iceye-ugcPost-7193248809001345025-a0ON" target="_blank" rel="noopener">launch at GEOINT 2024</a>
       </p>
+      <ul class="tags" aria-label="Stack and type">
+        <li>API</li>
+        <li>Web UI</li>
+        <li>Enterprise</li>
+        <li>Satellites</li>
+      </ul>
       <h3>Why</h3>
       <p>
         ICEYE operates the world's largest commercial SAR satellite

@@ -320,6 +320,85 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   margin: 0 0 2.5rem;
   font-size: 0.9rem;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.toc {
+  margin: 1.75rem 0 2.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  background: var(--surface);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.toc-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+}
+
+.toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: toc;
+}
+
+.toc li {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  counter-increment: toc;
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.toc li::before {
+  content: counter(toc, decimal-leading-zero);
+  color: var(--muted);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
+.toc a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+.toc a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tags li {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border: 1px solid var(--hairline);
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  background: var(--bg);
 }
 
 .project {
