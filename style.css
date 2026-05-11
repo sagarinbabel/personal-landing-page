@@ -497,3 +497,168 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
+
+/* --- Writing (landing page) ------------------------------------------- */
+
+.writing {
+  margin: 2.5rem 0 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--hairline);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+.writing h2 {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 0.85rem;
+}
+
+.writing ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.writing li {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.writing a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.writing a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.writing .pub {
+  font-weight: 500;
+}
+
+.writing .note {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+.writing .latest {
+  margin: 1.1rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.writing .latest a {
+  color: var(--fg);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.writing .latest a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* --- Writing highlight (projects page) -------------------------------- */
+
+.writing-highlight {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.75rem;
+  margin: 1.75rem 0 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  background: var(--surface);
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color 160ms ease, transform 220ms ease;
+}
+
+.writing-highlight:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.writing-highlight:hover .writing-highlight-cta {
+  color: var(--accent);
+}
+
+.writing-highlight-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  display: block;
+  border: 1px solid var(--hairline);
+}
+
+.writing-highlight-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.writing-highlight-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.writing-highlight h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.writing-highlight-dek {
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.writing-highlight-quote {
+  margin: 0 0 1rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--fg);
+  border-left: 2px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.writing-highlight-cta {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.88rem;
+  color: var(--fg);
+  letter-spacing: 0.01em;
+  transition: color 160ms ease;
+}
+
+@media (max-width: 560px) {
+  .writing-highlight {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+  .writing-highlight-cover {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .writing-highlight-body {
+    text-align: left;
+  }
+}
